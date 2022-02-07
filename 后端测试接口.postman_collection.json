@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "c6192e61-1255-4026-9ba6-bd9f431473d0",
+		"name": "后端测试接口",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "查询图书",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{back_url}}/book/:curPage/:pageSize?name&description&location&category&organization",
+					"host": [
+						"{{back_url}}"
+					],
+					"path": [
+						"book",
+						":curPage",
+						":pageSize"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null
+						},
+						{
+							"key": "description",
+							"value": null
+						},
+						{
+							"key": "location",
+							"value": null
+						},
+						{
+							"key": "category",
+							"value": null
+						},
+						{
+							"key": "organization",
+							"value": null
+						}
+					],
+					"variable": [
+						{
+							"key": "curPage",
+							"value": null
+						},
+						{
+							"key": "pageSize",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "添加图书",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Java核心技术\",\r\n    \"number\": 5,\r\n    \"description\": \"Java从入门到入土\",\r\n    \"location\": \"一层\",\r\n    \"category\": \"计算机\",\r\n    \"organization\": \"北京书院学生会\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{back_url}}/book"
+			},
+			"response": []
+		},
+		{
+			"name": "删除图书",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{back_url}}/book/:id",
+					"host": [
+						"{{back_url}}"
+					],
+					"path": [
+						"book",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新图书",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"name\": \"线性代数教程\",\r\n    \"number\": 6,\r\n    \"stockNum\": 6,\r\n    \"description\": \"同济大学出版\",\r\n    \"imageUrl\": \"https://www.kfzimg.com/G06/M00/D0/24/p4YBAFqYqJKAWb3GAACFCmcJuCQ703_n.jpg\",\r\n    \"location\": \"二层\",\r\n    \"category\": \"数学\",\r\n    \"organization\": \"北京书院\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{back_url}}/book"
+			},
+			"response": []
+		},
+		{
+			"name": "查询分类",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{back_url}}/bookCategory/:curPage/:pageSize",
+					"host": [
+						"{{back_url}}"
+					],
+					"path": [
+						"bookCategory",
+						":curPage",
+						":pageSize"
+					],
+					"variable": [
+						{
+							"key": "curPage",
+							"value": null
+						},
+						{
+							"key": "pageSize",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询组织",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{back_url}}/organization/:curPage/:pageSize",
+					"host": [
+						"{{back_url}}"
+					],
+					"path": [
+						"organization",
+						":curPage",
+						":pageSize"
+					],
+					"variable": [
+						{
+							"key": "curPage",
+							"value": null
+						},
+						{
+							"key": "pageSize",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

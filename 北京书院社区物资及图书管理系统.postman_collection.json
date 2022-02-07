@@ -1,0 +1,849 @@
+{
+	"info": {
+		"_postman_id": "aad65c03-a818-41c4-a683-4b738da46bb3",
+		"name": "北京书院社区物资及图书管理系统",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "前端测试接口",
+			"item": [
+				{
+					"name": "服务器故障",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "服务器故障",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/book/:curPage/:pageSize?name&description&location&category&organization",
+									"path": [
+										"book",
+										":curPage",
+										":pageSize"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": null,
+											"description": "名称"
+										},
+										{
+											"key": "description",
+											"value": null,
+											"description": "描述"
+										},
+										{
+											"key": "location",
+											"value": null,
+											"description": "位置"
+										},
+										{
+											"key": "category",
+											"value": null,
+											"description": "分类"
+										},
+										{
+											"key": "organization",
+											"value": null,
+											"description": "归属组织"
+										}
+									],
+									"variable": [
+										{
+											"key": "curPage",
+											"value": "1",
+											"description": "当前的页数"
+										},
+										{
+											"key": "pageSize",
+											"value": "5",
+											"description": "每页显示的数据"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"code\": 99999,\r\n    \"msg\": \"服务器故障，请稍后重试\",\r\n    \"data\": null\r\n}"
+						}
+					]
+				},
+				{
+					"name": "查询图书",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "查询图书失败",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/book/:curPage/:pageSize?name&description&location&category&organization",
+									"path": [
+										"book",
+										":curPage",
+										":pageSize"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": null
+										},
+										{
+											"key": "description",
+											"value": null
+										},
+										{
+											"key": "location",
+											"value": null
+										},
+										{
+											"key": "category",
+											"value": null
+										},
+										{
+											"key": "organization",
+											"value": null
+										}
+									],
+									"variable": [
+										{
+											"key": "curPage",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"code\": 10001,\n    \"msg\": \"获取图书失败\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "分页查询所有图书第1页",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/book/:curPage/:pageSize?name&description&location&category&organization",
+									"path": [
+										"book",
+										":curPage",
+										":pageSize"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": null
+										},
+										{
+											"key": "description",
+											"value": null
+										},
+										{
+											"key": "location",
+											"value": null
+										},
+										{
+											"key": "category",
+											"value": null
+										},
+										{
+											"key": "organization",
+											"value": null
+										}
+									],
+									"variable": [
+										{
+											"key": "curPage",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"success\",\n    \"data\": {\n        \"total\": 6,\n        \"size\": 5,\n        \"current\": 1,\n        \"pages\": 2,\n        \"records\": [\n            {\n                \"id\": 1,\n                \"name\": \"C语言程序设计\",\n                \"number\": 3,\n                \"stockNum\": 3,\n                \"description\": \"谭浩强出品\",\n                \"imageUrl\": \"https://www.kfzimg.com/sw/kfz-cos/kfzimg/9099800/1aa13aac43be0394_n.jpg\",\n                \"location\": \"一层\",\n                \"category\": \"计算机\",\n                \"organization\": \"北京书院\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"高等数学\",\n                \"number\": 2,\n                \"stockNum\": 0,\n                \"description\": \"同济大学出版\",\n                \"imageUrl\": \"https://www.kfzimg.com/sw/kfz-cos/kfzimg/12432791/4151accc2db4b093_n.jpg\",\n                \"location\": \"二层\",\n                \"category\": \"数学\",\n                \"organization\": \"北京书院\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"大学物理\",\n                \"number\": 4,\n                \"stockNum\": 3,\n                \"description\": \"北理工教学专用\",\n                \"imageUrl\": \"https://www.kfzimg.com/sw/kfz-cos/kfzimg/6743940/49b582d424419c1f_n.jpg\",\n                \"location\": \"三层\",\n                \"category\": \"物理\",\n                \"organization\": \"北京书院学生会\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"C++ Prime Plus\",\n                \"number\": 5,\n                \"stockNum\": 2,\n                \"description\": \"c++从入门到入土\",\n                \"imageUrl\": \"https://www.kfzimg.com/sw/kfzimg/1773/015a4ade52edf6cfb3_n.jpg\",\n                \"location\": \"一层\",\n                \"category\": \"计算机\",\n                \"organization\": \"北京书院学生会\"\n            },\n            {\n                \"id\": 5,\n                \"name\": \"线性代数\",\n                \"number\": 6,\n                \"stockNum\": 6,\n                \"description\": \"同济大学出版\",\n                \"imageUrl\": \"https://www.kfzimg.com/G06/M00/D0/24/p4YBAFqYqJKAWb3GAACFCmcJuCQ703_n.jpg\",\n                \"location\": \"二层\",\n                \"category\": \"数学\",\n                \"organization\": \"北京书院\"\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "分页查询所有图书第2页",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/book/:curPage/:pageSize?name&description&location&category&organization",
+									"path": [
+										"book",
+										":curPage",
+										":pageSize"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": null
+										},
+										{
+											"key": "description",
+											"value": null
+										},
+										{
+											"key": "location",
+											"value": null
+										},
+										{
+											"key": "category",
+											"value": null
+										},
+										{
+											"key": "organization",
+											"value": null
+										}
+									],
+									"variable": [
+										{
+											"key": "curPage",
+											"value": "2"
+										},
+										{
+											"key": "pageSize",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"success\",\n    \"data\": {\n        \"total\": 6,\n        \"size\": 5,\n        \"current\": 2,\n        \"pages\": 2,\n        \"records\": [\n            {\n                \"id\": 6,\n                \"name\": \"简明量子力学\",\n                \"number\": 4,\n                \"stockNum\": 4,\n                \"description\": \"北京大学出版\",\n                \"imageUrl\": \"https://www.kfzimg.com/sw/kfzimg/1838/016847d79e9ca38fac_n.jpg\",\n                \"location\": \"三层\",\n                \"category\": \"物理\",\n                \"organization\": \"北京书院学生会\"\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "按部分条件分页查询所有图书第1页",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/book/:curPage/:pageSize?name=学&description&location&category&organization",
+									"path": [
+										"book",
+										":curPage",
+										":pageSize"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "学"
+										},
+										{
+											"key": "description",
+											"value": null
+										},
+										{
+											"key": "location",
+											"value": null
+										},
+										{
+											"key": "category",
+											"value": null
+										},
+										{
+											"key": "organization",
+											"value": null
+										}
+									],
+									"variable": [
+										{
+											"key": "curPage",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"success\",\n    \"data\": {\n        \"total\": 3,\n        \"size\": 5,\n        \"current\": 1,\n        \"pages\": 1,\n        \"records\": [\n            {\n                \"id\": 2,\n                \"name\": \"高等数学\",\n                \"number\": 2,\n                \"stockNum\": 0,\n                \"description\": \"同济大学出版\",\n                \"imageUrl\": \"https://www.kfzimg.com/sw/kfz-cos/kfzimg/12432791/4151accc2db4b093_n.jpg\",\n                \"location\": \"二层\",\n                \"category\": \"数学\",\n                \"organization\": \"北京书院\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"大学物理\",\n                \"number\": 4,\n                \"stockNum\": 3,\n                \"description\": \"北理工教学专用\",\n                \"imageUrl\": \"https://www.kfzimg.com/sw/kfz-cos/kfzimg/6743940/49b582d424419c1f_n.jpg\",\n                \"location\": \"三层\",\n                \"category\": \"物理\",\n                \"organization\": \"北京书院学生会\"\n            },\n            {\n                \"id\": 6,\n                \"name\": \"简明量子力学\",\n                \"number\": 4,\n                \"stockNum\": 4,\n                \"description\": \"北京大学出版\",\n                \"imageUrl\": \"https://www.kfzimg.com/sw/kfzimg/1838/016847d79e9ca38fac_n.jpg\",\n                \"location\": \"三层\",\n                \"category\": \"物理\",\n                \"organization\": \"北京书院学生会\"\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "按部分条件分页查询所有图书第1页",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/book/:curPage/:pageSize?name=&description&location&category=计算机&organization",
+									"path": [
+										"book",
+										":curPage",
+										":pageSize"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": ""
+										},
+										{
+											"key": "description",
+											"value": null
+										},
+										{
+											"key": "location",
+											"value": null
+										},
+										{
+											"key": "category",
+											"value": "计算机"
+										},
+										{
+											"key": "organization",
+											"value": null
+										}
+									],
+									"variable": [
+										{
+											"key": "curPage",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"success\",\n    \"data\": {\n        \"total\": 2,\n        \"size\": 5,\n        \"current\": 1,\n        \"pages\": 1,\n        \"records\": [\n            {\n                \"id\": 1,\n                \"name\": \"C语言程序设计\",\n                \"number\": 3,\n                \"stockNum\": 3,\n                \"description\": \"谭浩强出品\",\n                \"imageUrl\": \"https://www.kfzimg.com/sw/kfz-cos/kfzimg/9099800/1aa13aac43be0394_n.jpg\",\n                \"location\": \"一层\",\n                \"category\": \"计算机\",\n                \"organization\": \"北京书院\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"C++ Prime Plus\",\n                \"number\": 5,\n                \"stockNum\": 2,\n                \"description\": \"c++从入门到入土\",\n                \"imageUrl\": \"https://www.kfzimg.com/sw/kfzimg/1773/015a4ade52edf6cfb3_n.jpg\",\n                \"location\": \"一层\",\n                \"category\": \"计算机\",\n                \"organization\": \"北京书院学生会\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "添加图书",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "添加图书失败",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Java核心技术\",\r\n    \"number\": 5,\r\n    \"description\": \"Java从入门到入土\",\r\n    \"location\": \"一层\",\r\n    \"category\": \"计算机\",\r\n    \"organization\": \"北京书院学生会\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "/book"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"code\": 10002,\n    \"msg\": \"添加图书失败\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "添加图书成功",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Java核心技术\",\r\n    \"number\": 5,\r\n    \"description\": \"Java从入门到入土\",\r\n    \"location\": \"一层\",\r\n    \"category\": \"计算机\",\r\n    \"organization\": \"北京书院学生会\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "/book"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"success\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "更新图书",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "更新图书失败",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 5,\r\n    \"name\": \"线性代数教程\",\r\n    \"number\": 6,\r\n    \"stockNum\": 6,\r\n    \"description\": \"同济大学出版\",\r\n    \"imageUrl\": \"https://www.kfzimg.com/G06/M00/D0/24/p4YBAFqYqJKAWb3GAACFCmcJuCQ703_n.jpg\",\r\n    \"location\": \"二层\",\r\n    \"category\": \"数学\",\r\n    \"organization\": \"北京书院\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "/book"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"code\": 10003,\r\n    \"msg\": \"更新图书信息失败\",\r\n    \"data\": null\r\n}"
+						},
+						{
+							"name": "更新图书成功",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 5,\r\n    \"name\": \"线性代数教程\",\r\n    \"number\": 6,\r\n    \"stockNum\": 6,\r\n    \"description\": \"同济大学出版\",\r\n    \"imageUrl\": \"https://www.kfzimg.com/G06/M00/D0/24/p4YBAFqYqJKAWb3GAACFCmcJuCQ703_n.jpg\",\r\n    \"location\": \"二层\",\r\n    \"category\": \"数学\",\r\n    \"organization\": \"北京书院\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "/book"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"code\": 200,\r\n    \"msg\": \"success\",\r\n    \"data\": null\r\n}"
+						}
+					]
+				},
+				{
+					"name": "删除图书",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "删除图书失败",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "/book/:id",
+									"path": [
+										"book",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3",
+											"description": "图书id"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"code\": 10004,\r\n    \"msg\": \"删除图书失败\",\r\n    \"data\": null\r\n}"
+						},
+						{
+							"name": "删除图书成功",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "/book/:id",
+									"path": [
+										"book",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"success\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "查询分类",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "查询分类失败",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/bookCategory/:curPage/:pageSize",
+									"path": [
+										"bookCategory",
+										":curPage",
+										":pageSize"
+									],
+									"variable": [
+										{
+											"key": "curPage",
+											"value": "1",
+											"description": "当前页数"
+										},
+										{
+											"key": "pageSize",
+											"value": "5",
+											"description": "每页的数据"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"code\": 20001,\r\n    \"msg\": \"获取图书分类失败\",\r\n    \"data\": null\r\n}"
+						},
+						{
+							"name": "分页查询所有分类",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/bookCategory/:curPage/:pageSize",
+									"path": [
+										"bookCategory",
+										":curPage",
+										":pageSize"
+									],
+									"variable": [
+										{
+											"key": "curPage",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"code\": 200,\r\n    \"msg\": \"success\",\r\n    \"data\": {\r\n        \"total\": 3,\r\n        \"size\": 5,\r\n        \"current\": 1,\r\n        \"pages\": 1,\r\n        \"records\": [\r\n            {\r\n                \"id\": 1,\r\n                \"name\": \"计算机\"\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"name\": \"数学\"\r\n            },\r\n            {\r\n                \"id\": 3,\r\n                \"name\": \"物理\"\r\n            }\r\n        ]\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "查询组织",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "查询组织失败",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/organization/:curPage/:pageSize",
+									"path": [
+										"organization",
+										":curPage",
+										":pageSize"
+									],
+									"variable": [
+										{
+											"key": "curPage",
+											"value": "1",
+											"description": "当前页数"
+										},
+										{
+											"key": "pageSize",
+											"value": "5",
+											"description": "每页的数据"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"code\": 30001,\n    \"msg\": \"获取组织信息失败\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "分页查询所有组织",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/organization/:curPage/:pageSize",
+									"path": [
+										"organization",
+										":curPage",
+										":pageSize"
+									],
+									"variable": [
+										{
+											"key": "curPage",
+											"value": null
+										},
+										{
+											"key": "pageSize",
+											"value": null
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"code\": 200,\r\n    \"msg\": \"success\",\r\n    \"data\": {\r\n        \"total\": 2,\r\n        \"size\": 5,\r\n        \"current\": 1,\r\n        \"pages\": 1,\r\n        \"records\": [\r\n            {\r\n                \"id\": 1,\r\n                \"name\": \"北京书院\"\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"name\": \"北京书院学生会\"\r\n            }\r\n        ]\r\n    }\r\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "后端测试接口",
+			"item": [
+				{
+					"name": "查询图书",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/book/:curPage/:pageSize?name&description&location&category&organization",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								":curPage",
+								":pageSize"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null
+								},
+								{
+									"key": "description",
+									"value": null
+								},
+								{
+									"key": "location",
+									"value": null
+								},
+								{
+									"key": "category",
+									"value": null
+								},
+								{
+									"key": "organization",
+									"value": null
+								}
+							],
+							"variable": [
+								{
+									"key": "curPage",
+									"value": null
+								},
+								{
+									"key": "pageSize",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加图书",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Java核心技术\",\r\n    \"number\": 5,\r\n    \"description\": \"Java从入门到入土\",\r\n    \"location\": \"一层\",\r\n    \"category\": \"计算机\",\r\n    \"organization\": \"北京书院学生会\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/book"
+					},
+					"response": []
+				},
+				{
+					"name": "删除图书",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/book/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "更新图书",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"name\": \"线性代数教程\",\r\n    \"number\": 6,\r\n    \"stockNum\": 6,\r\n    \"description\": \"同济大学出版\",\r\n    \"imageUrl\": \"https://www.kfzimg.com/G06/M00/D0/24/p4YBAFqYqJKAWb3GAACFCmcJuCQ703_n.jpg\",\r\n    \"location\": \"二层\",\r\n    \"category\": \"数学\",\r\n    \"organization\": \"北京书院\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/book"
+					},
+					"response": []
+				},
+				{
+					"name": "查询分类",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/bookCategory/:curPage/:pageSize",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookCategory",
+								":curPage",
+								":pageSize"
+							],
+							"variable": [
+								{
+									"key": "curPage",
+									"value": null
+								},
+								{
+									"key": "pageSize",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询组织",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/organization/:curPage/:pageSize",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"organization",
+								":curPage",
+								":pageSize"
+							],
+							"variable": [
+								{
+									"key": "curPage",
+									"value": null
+								},
+								{
+									"key": "pageSize",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
